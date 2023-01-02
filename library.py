@@ -516,7 +516,7 @@ class LibraryManagementSystem:
         messagebox.showinfo("Success","Member Has Been Inserted Successfully.")
 
     def update(self):
-        connection=mysql.connector.connect(host="localhost",username="root",password="mitali260202",database="mitalidb1")
+        connection=mysql.connector.connect(host="localhost",username="root",password="************",database="******")
         my_cursor=connection.cursor()
         my_cursor.execute("update library set Member=%s,ID=%s,Firstname=%s,Surname=%s,Address=%s,PostCode=%s,MobileNo=%s,BookID=%s,BookTitle=%s,AuthorName=%s,DateBorrowed=%s,DateDue=%s,LateReturnFine=%s,DateOverDue=%s,ActualPrice=%s where PRN_NO=%s",(
                                                                                                             self.member_var.get(),
@@ -545,7 +545,7 @@ class LibraryManagementSystem:
 
 
     def fetch_data(self):
-        connection=mysql.connector.connect(host="localhost",username="root",password="mitali260202",database="mitalidb1")
+        connection=mysql.connector.connect(host="localhost",username="root",password="************",database="******")
         my_cursor=connection.cursor()
         my_cursor.execute("select * from library")
         rows=my_cursor.fetchall()
@@ -627,7 +627,7 @@ class LibraryManagementSystem:
         if self.prn_var.get=="" or self.id_var.get()=="":
             messagebox.showerror("Error","First Select the Member")
         else:
-            connection=mysql.connector.connect(host="localhost",username="root",password="mitali260202",database="mitalidb1")
+            connection=mysql.connector.connect(host="localhost",username="root",password="************",database="******")
             my_cursor=connection.cursor()
             query="delete from library where PRN_NO=%s"
             value=(self.prn_var.get(),)
