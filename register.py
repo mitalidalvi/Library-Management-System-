@@ -128,7 +128,7 @@ class Register:
         elif self.var_check.get()==0:
             messagebox.showerror("Error","Please Agree Our Terms & Conditions.")
         else:
-            conn=mysql.connector.connect(host="localhost",user="root",password="mitali260202",database="mitalidb1")    
+            conn=mysql.connector.connect(host="localhost",user="root",password="************",database="*****")    
             my_cursor=conn.cursor()
             query=("select * from register where email=%s")
             value=(self.var_email.get(),)
