@@ -59,7 +59,7 @@ user interfaces.
 **Back End :** MySql Workbench 8.0 CE
 
 
-## Installation
+## Python Library Installation
 
 Install 
 
