@@ -93,7 +93,7 @@ class Login_Window:
         elif self.txtuser.get()=="Mitali" and self.txtpass.get()=="2602":
             messagebox.showinfo("Success...","Welcome")   
         else:
-            conn=mysql.connector.connect(host="localhost",user="root",password="mitali260202",database="mitalidb1")    
+            conn=mysql.connector.connect(host="localhost",user="root",password="************",database="*****")    
             my_cursor=conn.cursor()
             my_cursor.execute("Select * from register where email=%s and password=%s",(
                                                                                         self.txtuser.get(),
@@ -126,7 +126,7 @@ class Login_Window:
         elif self.txt_new_password.get()=="":
             messagebox.showerror("Error!","Please Enter the New Password.",parent=self.root2)
         else:
-            conn=mysql.connector.connect(host="localhost",user="root",password="mitali260202",database="mitalidb1")    
+            conn=mysql.connector.connect(host="localhost",user="root",password="************",database="*****")    
             my_cursor=conn.cursor()
             query=("Select * from register where email=%s and securityQ=%s and securityA=%s")
             value=(self.txtuser.get(),self.combo_securityQ.get(),self.txt_securityA.get())
@@ -151,7 +151,7 @@ class Login_Window:
         if self.txtuser.get()=="":
             messagebox.showerror("Error!","Please enter the email address to reset password.")
         else:
-            conn=mysql.connector.connect(host="localhost",user="root",password="mitali260202",database="mitalidb1")    
+            conn=mysql.connector.connect(host="localhost",user="root",password="************",database="*****")    
             my_cursor=conn.cursor()  
             query=("select * from register where email=%s")
             value=(self.txtuser.get(),)
@@ -320,7 +320,7 @@ class Register:
         elif self.var_check.get()==0:
             messagebox.showerror("Error!","Please Agree Our Terms & Conditions.",parent=self.root)
         else:
-            conn=mysql.connector.connect(host="localhost",user="root",password="mitali260202",database="mitalidb1")    
+            conn=mysql.connector.connect(host="localhost",user="root",password="************",database="******")    
             my_cursor=conn.cursor()
             query=("select * from register where email=%s")
             value=(self.var_email.get(),)
@@ -831,7 +831,7 @@ class Library_Management_System:
         
 
     def add_data(self):
-        connection=mysql.connector.connect(host="localhost",username="root",password="mitali260202",database="mitalidb1")
+        connection=mysql.connector.connect(host="localhost",username="root",password="************",database="*******")
         my_cursor=connection.cursor()
         my_cursor.execute("Insert Into Library Values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",(
                                                                                                             self.member_var.get(),
@@ -858,7 +858,7 @@ class Library_Management_System:
         messagebox.showinfo("Success...","Member Has Been Inserted Successfully.",parent=self.root)
 
     def update(self):
-        connection=mysql.connector.connect(host="localhost",username="root",password="mitali260202",database="mitalidb1")
+        connection=mysql.connector.connect(host="localhost",username="root",password="************",database="******")
         my_cursor=connection.cursor()
         my_cursor.execute("update library set Member=%s,ID=%s,Firstname=%s,Surname=%s,Address=%s,PostCode=%s,MobileNo=%s,BookID=%s,BookTitle=%s,AuthorName=%s,DateBorrowed=%s,DateDue=%s,LateReturnFine=%s,DateOverDue=%s,ActualPrice=%s where PRN_NO=%s",(
                                                                                                             self.member_var.get(),
@@ -887,7 +887,7 @@ class Library_Management_System:
 
 
     def fetch_data(self):
-        connection=mysql.connector.connect(host="localhost",username="root",password="mitali260202",database="mitalidb1")
+        connection=mysql.connector.connect(host="localhost",username="root",password="************",database="******")
         my_cursor=connection.cursor()
         my_cursor.execute("select * from library")
         rows=my_cursor.fetchall()
@@ -969,7 +969,7 @@ class Library_Management_System:
         if self.prn_var.get=="" or self.id_var.get()=="":
             messagebox.showerror("Error!","First Select the Member",parent=self.root)
         else:
-            connection=mysql.connector.connect(host="localhost",username="root",password="mitali260202",database="mitalidb1")
+            connection=mysql.connector.connect(host="localhost",username="root",password="************",database="******")
             my_cursor=connection.cursor()
             query="delete from library where PRN_NO=%s"
             value=(self.prn_var.get(),)
