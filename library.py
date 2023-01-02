@@ -489,7 +489,7 @@ class LibraryManagementSystem:
         self.library_table.bind("<ButtonRelease-1>",self.get_cursor)
 
     def add_data(self):
-        connection=mysql.connector.connect(host="localhost",username="root",password="mitali260202",database="mitalidb1")
+        connection=mysql.connector.connect(host="localhost",username="root",password="************",database="******")
         my_cursor=connection.cursor()
         my_cursor.execute("Insert Into Library Values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",(
                                                                                                             self.member_var.get(),
