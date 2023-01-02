@@ -4,7 +4,7 @@
 ## Abstract
 The project titled LIBRARY MANAGEMENT SYSTEM is Library management
 software for monitoring and controlling the transaction in a library. 
-This project is developed in web base, which mainly focus on basic 
+This project is developed in python language, which mainly focus on basic 
 operations in a library like adding new member, new books, updating 
 new information, searching books and facility to borrow and return
 books.This software is easy to use for both beginners and advance 
